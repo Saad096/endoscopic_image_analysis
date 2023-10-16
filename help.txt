@@ -15,7 +15,7 @@ output_file: The name of the output file where the converted data will be saved.
 
 2. filter_class.py
 
-Description: Filters data based on class and saves relevant files..
+Description: Filters data based on class and saves relevant files...
 
 Usage:
 

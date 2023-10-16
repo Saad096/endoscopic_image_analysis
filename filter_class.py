@@ -38,7 +38,7 @@ def copy_files_with_class_6(input_annotations_dir, output_annotations_dir, outpu
 
     print("Text and image files with class 6 and the required resolution", desired_resolution, "copied to the output directories.")
 
-#the code will start running from here
+#the code will start running from here.
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Copy files with class 6 and desired resolution to output directories.")
     parser.add_argument("input_annotations_dir", help="Path to the input annotations directory")
