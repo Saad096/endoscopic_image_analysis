@@ -1,0 +1,46 @@
+1. convert_json.py
+
+Description: Converts a JSON file to a different format.
+
+Usage:
+
+python convert_json.py input_file output_file
+
+
+Arguments:
+
+input_file: The input JSON file to be converted.
+output_file: The name of the output file where the converted data will be saved.
+
+
+2. filter_class.py
+
+Description: Filters data based on class and saves relevant files.
+
+Usage:
+
+python filter_class.py input_directory output_directory
+
+Arguments:
+
+input_directory: The directory containing text and image files.
+output_directory: The directory where filtered text and image files will be saved.
+
+
+3. filter512.py
+
+Description: Filters and saves images with a specific shape (512x512).
+
+Usage:
+
+python filter512.py input_directory output_directory --target_shape height width channels
+
+Arguments:
+
+input_directory: The directory containing image files.
+output_directory: The directory where filtered images will be saved.
+--target_shape: (Optional) Desired image shape in the format "height width channels."
+
+
+
+
