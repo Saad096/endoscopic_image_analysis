@@ -23,6 +23,7 @@ def filter_and_save_images(input_dir, output_dir, target_shape):
 
     print(f"Images with shape {target_shape} saved to the output folder.")
 
+#the code will start running from here
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Filter and save images with the target shape to the output directory.")
     parser.add_argument("input_dir", help="Path to the input directory")

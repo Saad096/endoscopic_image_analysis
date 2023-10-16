@@ -54,7 +54,8 @@ def convert_json(input_file, output_file):
     # Save the converted data to a new JSON file
     with open(output_file, "w") as file:
         json.dump(converted_data, file, indent=2)
-
+        
+#the code will start running from here
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python script.py <input_file> <output_file>")
