@@ -4,12 +4,10 @@
 # download: bash ./scripts/get_coco.sh
 
 # train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
-train: ../Datasets/training  # 1947 images
-val: ../Datasets/validation  # 242 images
-test: ../Datasets/testing  #  246 of 2435 images, submit to https://competitions.codalab.org/competitions/20794
-
+train: ../Datasets/training  # 2731 images
+val: ../Datasets/validation  # 340 images
+test: ../Datasets/testing  #  344 of  images, submit to https://competitions.codalab.org/competitions/20794
 # number of classes
 nc: 3
-
 # class names
 names: ['instrument', 'polyp', 'ulcerative-colitis']

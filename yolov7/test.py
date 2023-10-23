@@ -3,7 +3,7 @@ import json
 import os
 from pathlib import Path
 from threading import Thread
-
+#yolov7/endoscopic/endoscopic/weights/best.pt
 import numpy as np
 import torch
 import yaml
