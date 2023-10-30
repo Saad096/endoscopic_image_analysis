@@ -1,3 +1,0 @@
-Requirement already satisfied: lockfile in /home/saadalam/anaconda3/envs/endoscopic_image_analysis/lib/python3.8/site-packages (0.12.2)
-Requirement already satisfied: pyRFC3339 in /home/saadalam/anaconda3/envs/endoscopic_image_analysis/lib/python3.8/site-packages (1.1)
-Requirement already satisfied: pytz in /home/saadalam/.local/lib/python3.8/site-packages (from pyRFC3339) (2022.7.1)
