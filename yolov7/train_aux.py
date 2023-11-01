@@ -760,7 +760,7 @@ def train(hyp, opt, device, tb_writer=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--weights", type=str, default="yolo7.pt", help="initial weights path"
+        "--weights", type=str, default="../initial_weight/yolov7.pt", help="initial weights path"
     )
     parser.add_argument("--cfg", type=str, default="", help="model.yaml path")
     parser.add_argument(
@@ -833,7 +833,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--workers", type=int, default=8, help="maximum number of dataloader workers"
     )
-    parser.add_argument("--project", default="runs/train", help="save to project/name")
+    parser.add_argument("--project", default="", help="save to project/name")
     parser.add_argument("--entity", default=None, help="W&B entity")
     parser.add_argument("--name", default="exp", help="save to project/name")
     parser.add_argument(
