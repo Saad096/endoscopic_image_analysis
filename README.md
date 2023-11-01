@@ -1,6 +1,6 @@
 # go to code folder
 ``` shell
-cd model/yolov7
+cd yolov7
 ```
 
 
