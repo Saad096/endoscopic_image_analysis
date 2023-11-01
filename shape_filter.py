@@ -2,7 +2,15 @@ import cv2
 import os
 import argparse
 
-def filter_and_save_images(input_dir, output_dir, target_shape):
+def filter_shape(input_dir, output_dir, target_shape):
+    """_summary_
+    This function take an input directory and filter images having shape 512*512 to target directory.
+
+    Args:
+        input_dir (_type_): _description_
+        output_dir (_type_): _description_
+        target_shape (_type_): _description_
+    """
     # Create the output directory if it doesn't exist
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)

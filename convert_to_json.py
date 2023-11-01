@@ -1,7 +1,13 @@
 import json
 import sys
 
-def convert_json(input_file, output_file):
+def yolo_to_json(input_file, output_file):
+    """_summary_
+    This function is converting yolo test files folder to json format for 'label studio'
+    Args:
+        input_file (_type_): _description_
+        output_file (_type_): _description_
+    """
     # Load the original JSON data
     with open(input_file, "r") as file:
         original_data = json.load(file)
