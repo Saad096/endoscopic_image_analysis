@@ -1,17 +1,25 @@
-
-# Install required packages
-
+# Endoscopic Image Analysis
+### Installation
+Clone the repo
+``` shell
+git clone --branch saad https://github.com/axcelerateai/endoscopic_image_analysis.git
+```
+Install required packages
 ```shell
 pip install -r requirements.txt
 ```
-
-
-# go to code folder
+Go to working Directory folder and download trained_weights and dataset
 ``` shell
 cd yolov7
+# After cloning project repository daownload Trained_weights
+wget --no-check-certificate -r https://drive.google.com/drive/folders/1IxS8Leyz3DEvZC2blT_OwdEpV6rviBS9?usp=sharing
+# Download Datasets
+wget --no-check-certificate -O archive.zip https://drive.google.com/file/d/1aw2sLKRZ9Q0pRZziiTKfZ1wswo8JQTgL/view?usp=sharing
+# Extract Dataset
+unzip archive.zip -d .. 
 ```
 
-## Training
+### Train model
 
 ``` shell
 # train p5 models
@@ -28,20 +36,14 @@ sudo apt-get install xvfb
 
 
 
-## Inference
+### Run inference
 
 ``` shell
 # with ensamble
 xvfb-run -a python3 detect.py --weights Trained_weights/best1.pt Trained_weights/best2.pt Trained_weights/best3.pt Trained_weights/best4.pt --source ../Datasets/testing/images --img-size 640 --conf-thres 0.25 --iou-thres 0.5 --device 1 --view-img --save-txt --save-conf --classes 0 1 2 --agnostic-nms --augment --project ../Inferences/ --name exp2_results
 ```
 
-
-
-
-
-</details>
-
-## Testing
+### Run testing
 
 ``` shell
 # with ensamble
