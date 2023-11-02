@@ -3,7 +3,16 @@ import shutil
 import cv2
 import argparse
 
-def copy_files_with_class_6(input_annotations_dir, output_annotations_dir, output_images_dir, desired_resolution):
+def filter_desired_class(input_annotations_dir, output_annotations_dir, output_images_dir, desired_resolution):
+    """_summary_
+    This function is taking and input directory for annotations of yolo text files and filtering the text files and images having
+    class 6.
+    Args:
+        input_annotations_dir (_type_): _description_
+        output_annotations_dir (_type_): _description_
+        output_images_dir (_type_): _description_
+        desired_resolution (_type_): _description_
+    """
     # Create the output directories if they don't exist
     if not os.path.exists(output_annotations_dir):
         os.makedirs(output_annotations_dir)

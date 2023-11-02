@@ -12,9 +12,13 @@ Detect polyp, instrument, ulcerative colitis in endoscopic images using YOLOv7. 
 
 This repository contains a set of Python scripts for data processing and conversion. Each script serves a specific purpose and can be used to manipulate data as described below.
 
-## 1. `convert_json.py`
+## Data Processing Scripts in the "utils" folder
 
-**Description:** Converts a JSON file to a different format.
+The data processing scripts have been moved to a "utils" folder for better organization. You can find the following scripts in the "utils" folder:
+
+### 1. `yolo_to_json`
+
+**Description:** Converts a YOLO format text files to a Label Studio JSON file.
 
 **Usage:**
 
@@ -22,7 +26,7 @@ This repository contains a set of Python scripts for data processing and convers
 - `input_file`: The input JSON file to be converted.
 - `output_file`: The name of the output file where the converted data will be saved.
 
-## 2. `filter_class.py`
+### 2. `filter_class`
 
 **Description:** Filters data based on class and saves relevant files.
 
@@ -32,7 +36,7 @@ This repository contains a set of Python scripts for data processing and convers
 - `input_directory`: The directory containing text and image files.
 - `output_directory`: The directory where filtered text and image files will be saved.
 
-## 3. `filter512.py`
+### 3. `shape_filter.py`
 
 **Description:** Filters and saves images with a specific shape (512x512).
 
