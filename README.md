@@ -1,8 +1,5 @@
 # Endoscopic Image Analysis
 ### Installation
-Clone the repo
-``` shell
-git clone --branch saad https://github.com/axcelerateai/endoscopic_image_analysis.git
 ```
 Install required packages
 ```shell
