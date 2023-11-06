@@ -4,19 +4,41 @@ Clone the repo
 ``` shell
 git clone --branch saad https://github.com/axcelerateai/endoscopic_image_analysis.git
 ```
+Change directory to the project directory
+```shell
+cd endoscopic_image_analysis
+```
+Create virtual environment
+```shell
+python3 -m venv .env
+# Activate virtual environment
+source .env/bin/activate
+```
 Install required packages
 ```shell
 pip install -r requirements.txt
 ```
-Go to working Directory folder and download trained_weights and dataset
+Change directory to the model working directory and download trained_weights and datasets
 ``` shell
 cd yolov7
-# After cloning project repository daownload trained_weights
-wget --no-check-certificate -r https://drive.google.com/drive/folders/1IxS8Leyz3DEvZC2blT_OwdEpV6rviBS9?usp=sharing
-# Download Datasets
-wget --no-check-certificate -O archive.zip https://drive.google.com/file/d/1aw2sLKRZ9Q0pRZziiTKfZ1wswo8JQTgL/view?usp=sharing
+```
+Install gdown package.
+``` shell
+pip install gdown
+``` 
+After cloning project repository download trained_weights
+```shell
+# download trained_weights
+gdown https://drive.google.com/uc?id=1kgFsCWKE3wcg84KPODLnuMSlHj1qzRms
+# unzip trained_weights
+unzip trained_weights.zip
+rm trained_weights.zip
+```
+Download Datasets
+```shell
+gdown https://drive.google.com/uc?id=1wGkhk7KbXjTTBSwnfAWkiCHV3N8dZ0Wf
 # Extract Dataset
-unzip archive.zip -d .. 
+unzip Datasets.zip -d .. 
 ```
 
 ### Train model
