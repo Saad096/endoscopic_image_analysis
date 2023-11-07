@@ -39,6 +39,7 @@ Download Datasets
 gdown https://drive.google.com/uc?id=1wGkhk7KbXjTTBSwnfAWkiCHV3N8dZ0Wf
 # Extract Dataset
 unzip Datasets.zip -d .. 
+rm Datasets.zip
 ```
 
 ### Train model
