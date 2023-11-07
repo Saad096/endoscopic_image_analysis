@@ -36,7 +36,7 @@ rm trained_weights.zip
 ```
 Download Datasets
 ```shell
-gdown https://drive.google.com/uc?id=1wGkhk7KbXjTTBSwnfAWkiCHV3N8dZ0Wf
+gdown https://drive.google.com/uc?id=1e1aRXTEi8JlKid2-xdBlunUQxil-tMNf
 # Extract Dataset
 unzip Datasets.zip -d .. 
 rm Datasets.zip
