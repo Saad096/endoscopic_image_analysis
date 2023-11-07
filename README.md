@@ -46,7 +46,7 @@ rm Datasets.zip
 
 ``` shell
 # train p5 models
-python3 train_aux.py --cfg cfg/training/yolov7-e6e.yaml --data data/coco.yaml --workers 4 --device 0 --batch-size 8 --weights ../initial_weight/yolov7.pt --epochs 100 --img-size 640 --name trained_weights
+python3 train_aux.py --cfg cfg/training/yolov7-e6e.yaml --data data/coco.yaml --workers 4 --device 0 --batch-size 8 --weights ../initial_weight/yolov7.pt --epochs 300 --img-size 640 --name trained_weights
 ```
 
 To run inference command run following commands first to install xvfb pcackage on ubuntu os:
@@ -63,7 +63,7 @@ sudo apt-get install xvfb
 
 ``` shell
 # with ensamble
-xvfb-run -a python3 detect.py --weights trained_weights/best1.pt trained_weights/best2.pt trained_weights/best3.pt trained_weights/best4.pt --source ../Datasets/testing/images --img-size 640 --conf-thres 0.25 --iou-thres 0.5 --device 1 --view-img --save-txt --save-conf --classes 0 1 2 --agnostic-nms --augment --project ../inference/ --name exp2_results
+xvfb-run -a python3 detect.py --weights trained_weights/best1.pt trained_weights/best2.pt trained_weights/best3.pt trained_weights/best4.pt --source ../Datasets/testing/images --img-size 640 --conf-thres 0.25 --iou-thres 0.5 --device 0 --view-img --save-txt --save-conf --classes 0 1 2 --agnostic-nms --augment --project ../inference/ --name exp2_results
 ```
 
 ### Run testing
@@ -78,7 +78,7 @@ python3 test.py \
     --conf-thres 0.001 \
     --iou-thres 0.5 \
     --task test \
-    --device 1 \
+    --device 0 \
     --augment \
     --verbose \
     --save-txt \
