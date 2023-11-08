@@ -29,7 +29,7 @@ pip install gdown
 After cloning project repository download trained_weights
 ```shell
 # download trained_weights
-gdown https://drive.google.com/uc?id=1kgFsCWKE3wcg84KPODLnuMSlHj1qzRms
+gdown https://drive.google.com/uc?id=1P-FrH3GGdJa0tCwbPnShMLum98OhYbhs
 # unzip trained_weights
 unzip trained_weights.zip
 rm trained_weights.zip
@@ -63,7 +63,7 @@ sudo apt-get install xvfb
 
 ``` shell
 # with ensamble
-xvfb-run -a python3 detect.py --weights trained_weights/best1.pt trained_weights/best2.pt trained_weights/best3.pt trained_weights/best4.pt --source ../Datasets/testing/images --img-size 640 --conf-thres 0.25 --iou-thres 0.5 --device 0 --view-img --save-txt --save-conf --classes 0 1 2 --agnostic-nms --augment --project ../inference/ --name exp2_results
+xvfb-run -a python3 detect.py --weights trained_weights/best1.pt trained_weights/best2.pt trained_weights/best3.pt trained_weights/best4.pt trained_weights/best5.pt --source ../Datasets/testing/images --img-size 640 --conf-thres 0.25 --iou-thres 0.5 --device 0 --view-img --save-txt --save-conf --classes 0 1 2 --agnostic-nms --augment --project ../inference/ --name exp2_results
 ```
 
 ### Run testing
@@ -71,7 +71,7 @@ xvfb-run -a python3 detect.py --weights trained_weights/best1.pt trained_weights
 ``` shell
 # with ensamble
 python3 test.py \
-    --weights trained_weights/best1.pt trained_weights/best2.pt trained_weights/best3.pt trained_weights/best4.pt \
+    --weights trained_weights/best1.pt trained_weights/best2.pt trained_weights/best3.pt trained_weights/best4.pt trained_weights/best5.pt \
     --data data/coco.yaml \
     --batch-size 16 \
     --img-size 640 \

@@ -105,7 +105,8 @@ wheels/
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
-
+#ignore test inference
+inference
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -142,6 +143,9 @@ docs/_build/
 # PyBuilder
 target/
 
+#ignore weights
+
+trained_weights
 # Jupyter Notebook
 .ipynb_checkpoints
 
