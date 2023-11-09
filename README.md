@@ -1,8 +1,5 @@
 # Endoscopic Image Analysis
 ### Installation
-Clone the repo
-``` shell
-git clone --branch saad https://github.com/axcelerateai/endoscopic_image_analysis.git
 ```
 Change directory to the project directory
 ```shell
@@ -18,7 +15,59 @@ Install required packages
 ```shell
 pip install -r requirements.txt
 ```
+<<<<<<< HEAD
 Change directory to the model working directory and download trained_weights and datasets
+=======
+
+# endoscopic_image_analysis
+Detect polyp, instrument, ulcerative colitis in endoscopic images using YOLOv7. Medical images
+# Data Processing Scripts
+
+This repository contains a set of Python scripts for data processing and conversion. Each script serves a specific purpose and can be used to manipulate data as described below.
+
+## Data Processing Scripts in the "utils" folder
+
+The data processing scripts have been moved to a "utils" folder for better organization. You can find the following scripts in the "utils" folder:
+
+### 1. `yolo_to_json`
+
+**Description:** Converts a YOLO format text files to a Label Studio JSON file.
+
+**Usage:**
+
+**Arguments:**
+- `input_file`: The input JSON file to be converted.
+- `output_file`: The name of the output file where the converted data will be saved.
+
+### 2. `filter_class`
+
+**Description:** Filters data based on class and saves relevant files.
+
+**Usage:**
+
+**Arguments:**
+- `input_directory`: The directory containing text and image files.
+- `output_directory`: The directory where filtered text and image files will be saved.
+
+### 3. `shape_filter.py`
+
+**Description:** Filters and saves images with a specific shape (512x512).
+
+**Usage:**
+
+**Arguments:**
+- `input_directory`: The directory containing image files.
+- `output_directory`: The directory where filtered images will be saved.
+- `--target_shape` (Optional): Desired image shape in the format "height width channels."
+
+Feel free to use these scripts to process your data efficiently.
+
+For detailed information about each script, please refer to their respective source code.
+
+
+# go to code folder
+Go to working Directory folder and download trained_weights and dataset
+>>>>>>> f204aefe7178542f060f4da649390bab24f22663
 ``` shell
 cd yolov7
 ```
@@ -90,3 +139,4 @@ python3 test.py \
     --no-trace \
     --v5-metric
 ```
+

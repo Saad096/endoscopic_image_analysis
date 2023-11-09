@@ -1,4 +1,9 @@
 Datasets
 weight
+<<<<<<< HEAD
 inference/exp3_results
 .env
+=======
+.env
+yolov7/Trained_weights
+>>>>>>> f204aefe7178542f060f4da649390bab24f22663
