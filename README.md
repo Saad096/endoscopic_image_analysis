@@ -24,30 +24,30 @@ pip install -r requirements.txt
 #### Prepare and preprocess custom dataset by "preprocess_utils".
 
 ##### convert_to_Json.py
-**Usage:** convert polygon json to yolo fromat bounding boxes
+Usage: convert polygon json to yolo fromat bounding boxes
 
-**Arguments:**
+Arguments:
 - `input_file`: The input JSON file to be converted.
 - `output_file`: The name of the output file where the converted data will be saved.
 
 ##### filter_classes.py
 
-**Description:** Filters data based on class and saves relevant files.
+Description: Filters data based on class and saves relevant files.
 
 ##### shape_filter.py
 
-**Description:** Filters and saves images with a specific shape (512x512).
+Description: Filters and saves images with a specific shape (512x512).
 
-**Usage:**
+Usage:
 
-**Arguments:**
+Arguments:
 - input_directory: The directory containing image files.
 - output_directory: The directory where filtered images will be saved.
 - target_shape: Desired image shape in the format "height width channels."
 
 ##### train_test_split.py
 
-**Description:** Split dataset into required splitting ratio for training, testing and validation.
+Description: Split dataset into required splitting ratio for training, testing and validation.
 
 ### Installation
 
@@ -84,7 +84,7 @@ pip install wandb
 
 ``` shell
 # train p5 models
-python3 train_aux.py --cfg cfg/training/yolov7-e6e.yaml --data data/coco.yaml --workers 4 --device 0 --multi-scale --batch-size 8 --weights ../initial_weight/yolov7.pt --epochs 300 --img-size 640 --name trained_weights
+python3 train_aux.py --cfg cfg/training/yolov7-e6e.yaml --data data/coco.yaml --workers 4 --device 0 --multi-scale --batch-size 8 --weights ../initial_weight/yolov7.pt --epochs 300 --img-size 640 --name trained_weights --exist-ok
 ```
 
 
