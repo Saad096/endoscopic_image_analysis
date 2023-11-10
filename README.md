@@ -1,6 +1,12 @@
 # Endoscopic Image Analysis
-### Installation
+**Description:** 
+Detect polyp, instrument, ulcerative colitis in endoscopic images using YOLOv7.
+
+**Clone the repo:**
+```shell
+git clone --branch saad https://github.com/axcelerateai/endoscopic_image_analysis.git
 ```
+
 Change directory to the project directory
 ```shell
 cd endoscopic_image_analysis
@@ -15,59 +21,37 @@ Install required packages
 ```shell
 pip install -r requirements.txt
 ```
-<<<<<<< HEAD
-Change directory to the model working directory and download trained_weights and datasets
-=======
+#### Prepare and preprocess custom dataset by "preprocess_utils".
 
-# endoscopic_image_analysis
-Detect polyp, instrument, ulcerative colitis in endoscopic images using YOLOv7. Medical images
-# Data Processing Scripts
-
-This repository contains a set of Python scripts for data processing and conversion. Each script serves a specific purpose and can be used to manipulate data as described below.
-
-## Data Processing Scripts in the "utils" folder
-
-The data processing scripts have been moved to a "utils" folder for better organization. You can find the following scripts in the "utils" folder:
-
-### 1. `yolo_to_json`
-
-**Description:** Converts a YOLO format text files to a Label Studio JSON file.
-
-**Usage:**
+##### convert_to_Json.py
+**Usage:** convert polygon json to yolo fromat bounding boxes
 
 **Arguments:**
 - `input_file`: The input JSON file to be converted.
 - `output_file`: The name of the output file where the converted data will be saved.
 
-### 2. `filter_class`
+##### filter_classes.py
 
 **Description:** Filters data based on class and saves relevant files.
 
-**Usage:**
-
-**Arguments:**
-- `input_directory`: The directory containing text and image files.
-- `output_directory`: The directory where filtered text and image files will be saved.
-
-### 3. `shape_filter.py`
+##### shape_filter.py
 
 **Description:** Filters and saves images with a specific shape (512x512).
 
 **Usage:**
 
 **Arguments:**
-- `input_directory`: The directory containing image files.
-- `output_directory`: The directory where filtered images will be saved.
-- `--target_shape` (Optional): Desired image shape in the format "height width channels."
+- input_directory: The directory containing image files.
+- output_directory: The directory where filtered images will be saved.
+- target_shape: Desired image shape in the format "height width channels."
 
-Feel free to use these scripts to process your data efficiently.
+##### train_test_split.py
 
-For detailed information about each script, please refer to their respective source code.
+**Description:** Split dataset into required splitting ratio for training, testing and validation.
 
+### Installation
 
-# go to code folder
-Go to working Directory folder and download trained_weights and dataset
->>>>>>> f204aefe7178542f060f4da649390bab24f22663
+Change directory to the model working directory and download trained_weights and datasets
 ``` shell
 cd yolov7
 ```
@@ -93,22 +77,25 @@ rm Datasets.zip
 
 ### Train model
 
-``` shell
-# train p5 models
-python3 train_aux.py --cfg cfg/training/yolov7-e6e.yaml --data data/coco.yaml --workers 4 --device 0 --batch-size 8 --weights ../initial_weight/yolov7.pt --epochs 300 --img-size 640 --name trained_weights
+```shell
+# install wandb
+pip install wandb
 ```
 
-To run inference command run following commands first to install xvfb pcackage on ubuntu os:
+``` shell
+# train p5 models
+python3 train_aux.py --cfg cfg/training/yolov7-e6e.yaml --data data/coco.yaml --workers 4 --device 0 --multi-scale --batch-size 8 --weights ../initial_weight/yolov7.pt --epochs 300 --img-size 640 --name trained_weights
+```
+
+
+### Run inference
+Run following commands first to install xvfb package:
 
 ``` shell
 sudo apt-get update
 # Ater updaing the OS run following command to install the packae:
 sudo apt-get install xvfb
 ```
-
-
-
-### Run inference
 
 ``` shell
 # with ensamble
